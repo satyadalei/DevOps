@@ -1,0 +1,64 @@
+# key value pair
+"name" : "satyanarayan"
+1 : "I am one"
+
+
+--- # document separator
+# list
+- apple
+- mango
+- banana
+- Apple
+# YAML is case sensitive i.e "apple" & "Apple" are two different things
+
+---
+Cities : 
+ - New Delhi
+ - Mumbai
+ - Bhubaneswar
+ - Jajpur
+  # - Cuttack" - this will give the erro
+
+... #documents ends
+
+Cities : [New Delhi, Mumbai, Bhubaneswar, Jajpur]
+
+...
+{mango : "Yellow frouit", age: 56}
+
+# storing string datas
+name: Satyanarayan Dalei #anything you write after colon then it is called string
+name : "Satyanarayan Dalei" #in double quote
+name : 'Satyanarayan' #in single quote
+
+#multiline sentences 
+Bio : |  
+Hi everyone my name is Satyanarayan dalei.
+I like to travel everywhere.
+
+#writting in multiple line but showing in a single line
+Message: >
+ This will
+ be shown in 
+ a single
+ line in YAML
+
+#Other data types
+Number : 45
+Float : 67.78
+BooleanValue : No # You can also write -> FALSE, F, f, false
+BoleanValue : YES # or 👉 TRUE, T, true
+
+#specifying the data types 
+Zero: !!int 0
+positiveNum: !!int 67
+negativeNum: !!int -45
+binaryNum : !!int 011001
+octaNum: !!int 06574
+hexa: !!int 0x45
+commaValue: !!int +540_00 # 540,000
+
+#floatingpointNum 
+marks: !!float 78.89
+infine: !!float .inf 
+not a num : .nan
